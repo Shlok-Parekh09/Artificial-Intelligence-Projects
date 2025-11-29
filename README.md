@@ -1,5 +1,5 @@
 📌 Projects Included <br>
-<b> 1. AI Agent – YouTube Video Summarizer & Study Pack Generator
+<b> 1. AI Agent – YouTube Video Summarizer & Study Pack Generator </b>
 This project automatically:
 <ul> 
   <li> 🎤 Transcribes YouTube video audio using Local Whisper </li>
