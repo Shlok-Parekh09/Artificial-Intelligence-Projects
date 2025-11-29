@@ -1,4 +1,4 @@
-📌 Projects Included
+📌 Projects Included <br>
 <b> 1. AI Agent – YouTube Video Summarizer & Study Pack Generator
 This project automatically:
 <ul> 
