@@ -13,3 +13,9 @@ https://apify.com/?gfa3sd=advQiAqsitBhDlARIsAGMR1RixghUQjuWARa8LoLw9WNnE2i9Hzhsh
 <img width="779" height="467" alt="image" src="https://github.com/user-attachments/assets/309d9361-f170-4007-866a-38236e5d0a68" />
 
 Then generate your APIfy API key and use it in the code
+
+## GROQ API key
+### Login to the following website
+https://console.groq.com/keys
+
+Then generate your API key
