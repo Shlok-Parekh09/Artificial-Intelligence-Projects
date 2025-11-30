@@ -6,7 +6,7 @@ This project automatically:
   <li> 📝 Summarizes the lecture using Apify → Groq → Mistral fallback </li>
   <li> 🎯 Generates Flashcards (15 Q&A) </li>
   <li> 🧪 Creates MCQs (10 questions with answers + explanations) </li>
-📄 Exports everything into a clean Markdown Study Pack
+  <li> 📄 Exports everything into a clean Markdown Study Pack </li>
 </ul>
 
 This agent is ideal for:
