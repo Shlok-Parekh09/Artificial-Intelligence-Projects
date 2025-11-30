@@ -38,3 +38,29 @@ https://admin.mistral.ai/organization/api-keys
 
 Then generate your MISTRAL API key and use it in the code
 
+# 2. Install the extension Get cookies.txt LOCALLY
+<img width="959" height="470" alt="image" src="https://github.com/user-attachments/assets/b39c0901-0177-4dbc-9f44-391d4b104103" />
+
+### ✅ What this extension does
+It extracts all cookies from your browser for the current site and downloads them into cookies.txt. This allows external tools to reuse your login session without needing: 
+
+<ul>  
+<li> Username/password </li>
+<li> 2FA </li>
+<li> Captcha </li>
+<li> Google login </li>
+<li> YouTube account switching </li>
+</ul> 
+
+### ⭐ Why you need this for YouTube / yt-dlp
+YouTube restricts many videos unless You are logged in such as :
+<ul> 
+<li> Age-restricted videos </li>
+<li> Region-blocked videos </li>
+<li> "Sign in to confirm your age" </li>
+<li> Private/unlisted playlists </li>
+<li> Premium quality formats (1080p/4K in some cases) </li>
+<li> Members-only videos </li>
+</ul>
+
+yt-dlp cannot log in by itself. But if you give it your cookies.txt, it will behave as your logged-in browser.
