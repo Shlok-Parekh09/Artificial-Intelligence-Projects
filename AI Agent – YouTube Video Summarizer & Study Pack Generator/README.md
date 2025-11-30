@@ -1,3 +1,74 @@
+# What does ShikshaAI do 
+# 🧠 ShikshaAI Agents
+
+ShikshaAI is built as a modular pipeline of intelligent agents. Each agent has a single responsibility, clear inputs/outputs, and resilient fallback logic so the pipeline never fails silently. Together, they transform YouTube lectures into structured study packs.
+
+---
+
+## 🎧 TranscriptAgent — Audio Download + Transcription
+Extracts audio from YouTube and produces a clean transcript using Whisper.  
+- Downloads audio with `yt-dlp`, supporting cookies for restricted videos.  
+- Falls back from `bestaudio` to `best` if needed.  
+- Splits long audio into chunks for efficient Whisper inference.  
+- Outputs: Transcript string.  
+
+---
+
+## 📝 SummarizationAgent — Multi-Provider Summary Generator
+Condenses the transcript into structured, readable notes.  
+- Uses fallback chain: **APIfy → Groq → Mistral**.  
+- Produces consistent sections (Overview, Key Concepts, Methods, Takeaways).  
+- Outputs: Summary string.  
+
+---
+
+## 🎯 FlashcardAgent — Active Recall Generator
+Converts summaries into compact Q&A items.  
+- Generates factual question-answer pairs.  
+- Ensures coverage of all key concepts.  
+- Outputs: Markdown list of flashcards.  
+
+---
+
+## 🧪 QuizAgent — Multiple-Choice Question Generator
+Creates MCQs with rationales to test understanding.  
+- Generates questions with 4–5 options.  
+- Provides rationales for correct answers.  
+- Balances easy, medium, and hard questions.  
+- Outputs: Markdown quiz section.  
+
+---
+
+## 📦 ExportAgent — Markdown Packager
+Combines all outputs into a single Markdown file.  
+- Includes video URL, summary, flashcards, quiz, and transcript.  
+- Saves as `ShikshaAI_Output_<video_id>.md`.  
+
+---
+
+## 🧭 Pipeline Orchestration
+Runs the full pipeline end-to-end.  
+- Reads video IDs from `config.yaml` (non-interactive).  
+- Uses `ThreadPoolExecutor` for parallel processing.  
+- Handles errors gracefully so one failure doesn’t block others.  
+
+---
+
+## 📊 Agent Summary Table
+
+| Agent              | Role                          | Input            | Output             |
+|--------------------|-------------------------------|------------------|--------------------|
+| TranscriptAgent    | Audio download + transcription | YouTube URL      | Transcript string  |
+| SummarizationAgent | Summarizes transcript          | Transcript       | Summary string     |
+| FlashcardAgent     | Generates flashcards           | Summary          | Markdown Q&A list  |
+| QuizAgent          | Creates MCQs with rationales   | Summary          | Markdown quiz      |
+| ExportAgent        | Packages results               | All agent outputs| Markdown file      |
+
+---
+
+Each agent is modular, resilient, and designed for plug-and-play upgrades. You can swap providers, tweak formats, or extend functionality without breaking the pipeline.
+
+
 # 1. Generate all API keys first 
 ## a. APIfy API key
 #### i. Login to the following website first ####
