@@ -68,9 +68,9 @@ Runs the full pipeline end-to-end.
 
 Each agent is modular, resilient, and designed for plug-and-play upgrades. You can swap providers, tweak formats, or extend functionality without breaking the pipeline.
 
-
-# 1. Generate all API keys first 
-## a. APIfy API key
+# Steps to perform before running code
+## 1. Generate all API keys first 
+### a. APIfy API key
 #### i. Login to the following website first ####
 https://apify.com/?gfa3sd=advQiAqsitBhDlARIsAGMR1RixghUQjuWARa8LoLw9WNnE2i9HzhshGfsvbS3ok6UH048kqGIMaAlbLEAga3scB&fpr=3eoy4&gad_source=1&gad_campaignid=22728086574&gbraid=0AAAABAZRuvTvmu_29iN_uRLN1SNF9ZgYZ&gclid=CjwKCAiA86_JBhAIEiwA4i9Ju6s2eNHcPr9bk8D7s4RX2ekzLIqQ-aH2tKGXRZlQlfdqidllgsReGRoC1IgQAvD_BwE
 
@@ -85,13 +85,13 @@ https://apify.com/?gfa3sd=advQiAqsitBhDlARIsAGMR1RixghUQjuWARa8LoLw9WNnE2i9Hzhsh
 
 Then generate your APIfy API key and use it in the code
 
-## b. GROQ API key
+### b. GROQ API key
 #### i. Login to the following website ####
 https://console.groq.com/keys
 
 Then generate your GROQ API key and use it in the code
 
-## c. Mistral API key
+### c. Mistral API key
 #### i. Login to following website ####
 https://admin.mistral.ai/organization/api-keys
 
