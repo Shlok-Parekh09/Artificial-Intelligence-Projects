@@ -1,1 +1,19 @@
+# -------------------------
+# ShikshaAI – Pipeline Config
+# -------------------------
+
+# Where all outputs (summaries, flashcards, quizzes, transcripts) will be saved
+output_dir: "./output"
+
+# Number of parallel workers for ThreadPoolExecutor (keep 1 on Kaggle)
+max_workers: 1
+
+# Audio chunk length in seconds for Whisper chunking
+chunk_length: 600   # 10 minutes
+
+# Optional: Path to cookies.txt for YouTube login (auto-set by setup_cookies)
+cookies_file: ""
+
+# YouTube Video IDs to process (comma-separated)
+video_ids: "UdE-W30oOXo"
 
