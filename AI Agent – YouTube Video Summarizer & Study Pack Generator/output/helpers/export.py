@@ -1,19 +1,48 @@
-import json
-from helpers.utils import ensure_dir
+import os
+from helpers.utils import safe_filename, extract_video_id
 
-def save_summary(text, path="output/summary.txt"):
-    ensure_dir("output")
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(text)
+class ExportAgent:
+    def __init__(self, output_dir: str):
+        self.output_dir = output_dir
+        os.makedirs(self.output_dir, exist_ok=True)
 
-def save_flashcards(text, path="output/flashcards.txt"):
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(text)
+    def save_markdown(self, url, transcript, summary, flashcards, quiz):
+        base_id = extract_video_id(url)
+        file_path = os.path.join(
+            self.output_dir,
+            f"ShikshaAI_Output_{safe_filename(base_id)}.md"
+        )
 
-def save_quiz(text, path="output/quiz.txt"):
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(text)
+        content = f"""
+# 📘 ShikshaAI Study Pack
 
-def save_json(data, path="output/data.json"):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4)
+---
+
+## 📺 URL
+{url}
+
+---
+
+## 📝 Summary
+{summary}
+
+---
+
+## 🎯 Flashcards
+{flashcards}
+
+---
+
+## 🧪 Quiz
+{quiz}
+
+---
+
+## 🎤 Transcript (Local Whisper)
+{transcript}
+"""
+
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(content)
+
+        print(f"📄 Exported: {file_path}")
