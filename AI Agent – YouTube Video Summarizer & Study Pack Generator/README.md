@@ -1,4 +1,4 @@
-# What does ShikshaAI do 
+# I. What does ShikshaAI do 
 # 🧠 ShikshaAI Agents
 
 ShikshaAI is built as a modular pipeline of intelligent agents. Each agent has a single responsibility, clear inputs/outputs, and resilient fallback logic so the pipeline never fails silently. Together, they transform YouTube lectures into structured study packs.
@@ -68,7 +68,7 @@ Runs the full pipeline end-to-end.
 
 Each agent is modular, resilient, and designed for plug-and-play upgrades. You can swap providers, tweak formats, or extend functionality without breaking the pipeline.
 
-# Steps to perform before running code
+# II. Steps to perform before running code
 ## 1. Generate all API keys first 
 ### a. APIfy API key
 #### i. Login to the following website first ####
